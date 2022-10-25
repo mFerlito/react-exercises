@@ -3,7 +3,7 @@ import { ClickTracker } from './components/ClickTracker'
 import { Counter } from './components/Counter'
 import { InteractiveWelcome } from './components/InteractiveWelcome'
 import {Login} from './components/Login'
-
+import { MyUncontrolledForm } from './components/MyUncontrolledForm'
 
 export class App extends React.Component {
     render() {
@@ -12,6 +12,7 @@ export class App extends React.Component {
             <Counter initialValue={0} incrementInterval={1000} incrementAmount ={1}/>
             <ClickTracker />
             <Login />
+            <MyUncontrolledForm />
         </div>
 
     }
