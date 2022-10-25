@@ -16,9 +16,21 @@ export class App extends React.Component {
             <ClickTracker />
             <Login />
             <MyUncontrolledForm />
-            <MyTodoList />
             <Welcome />
             <Container title={'This is an awesome title passed as prop :D'} />
+            <MyTodoList  render={(names) => {
+                return(
+                    <div className="container_todoListStyle">
+                        <ul className="container_todoListStyle_ul">
+                            {names.map((name, index) => <li key={name + index}>{name}
+                            <button onClick={() => {names.splice(index, 1);
+                            this.setState({ 
+                                    names: names });
+                                    }}>Remove</button></li>)}
+                        </ul>
+                    </div>
+                )
+            }}/> 
         </div>
 
     }

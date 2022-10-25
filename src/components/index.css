@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,23 +8,25 @@ body {
     padding: 15px;
 }
 
-.welcome{
+.welcome {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     padding: 10px;
     background-color: rgba(169, 169, 169, 0.384);
     border: 3px solid rgba(158, 38, 148, 0.61);
-    color: rgba(219, 43, 205, 0.493); 
+    color: rgba(219, 43, 205, 0.493);
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.container{
+
+.container {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     background-color: #FFFFFF;
     border: 1px solid #FF0000;
 }
-.container_title { 
+
+.container_title {
     color: #e61eba;
     border: 2px solid #79035f8f;
     display: flex;
@@ -37,5 +39,41 @@ body {
 .container_title:hover {
     text-transform: uppercase;
     text-decoration: underline;
-    cursor: grab; 
+    cursor: grab;
+}
+
+.container_todoListStyle {
+    background-color: rgba(177, 15, 155, 0.568);
+    border: 2px solid rgba(240, 60, 210, 0.842);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-image: linear-gradient(rgba(112, 21, 97, rgba(93, 13, 104, 0.74)), rgba(170, 23, 228, 0.733));
+    box-shadow: 5px 8px 10px rgba(242, 15, 250, 0.877);
+
+}
+
+.container_todoListStyle_ul {
+    list-style: none;
+    padding: 0.25rem;
+
+}
+
+li {
+    background-image: linear-gradient(rgba(94, 10, 133, 0.719), rgba(160, 13, 160, 0.63));
+    border-radius: 15px;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-left: 0.75rem;
+    padding: 0.5rem;
+
+}
+
+button {
+    border-radius: 5px;
+    margin-left: 5px;
+    background-image: linear-gradient(rgba(94, 10, 133, 0.719), rgba(160, 13, 160, 0.63));
+    color: #330d9c9c;
+    padding: 0.5rem;
+
 }
