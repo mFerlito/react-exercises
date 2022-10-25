@@ -5,7 +5,7 @@ export class MyTodoList extends React.Component {
         names: ['Andrea', 'Paolo', 'Gabriele', 'Diego', 'Asdrubale', 'Giampiero'],
         valueInput: '',
     }
- 
+
     handlerInputChange = (event) => {
         this.setState({
             valueInput: event.target.value
@@ -18,8 +18,8 @@ export class MyTodoList extends React.Component {
             // attraverso lo spread operator evito che una volta aggiunto un elemento 
             // alla lista, l'array venga compresso in un li
         })
-    }  
-     handlerReset = () => {
+    }
+    handlerReset = () => {
         this.setState({
             names: []
         })
@@ -29,7 +29,14 @@ export class MyTodoList extends React.Component {
         return (
             <div>
                 <ul>
-                    {this.state.names.map((name, index) => <li key={name + index}>{name}</li>)}
+                    {this.state.names.map((name, index) => <li key={name + index}>{name}
+                        <button onClick={() => {
+                            this.state.names.splice(index, 1);
+                            this.setState({
+                                names: this.state.names
+                            })
+                        }}>Remove Name</button></li>)}
+                        
                 </ul>
 
                 <input type="text"
@@ -41,6 +48,7 @@ export class MyTodoList extends React.Component {
 
                 <button onClick={this.handlerAddName}>Add name</button>
                 <button onClick={this.handlerReset}>Reset list</button>
+
             </div>
         )
     }
