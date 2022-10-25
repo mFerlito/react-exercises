@@ -18,3 +18,9 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.container{
+    display: flex;
+    justify-content: space-around; 
+    background-color: #FFFFFF;
+    border: 1px solid #FF0000;
+}

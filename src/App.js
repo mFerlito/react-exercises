@@ -6,6 +6,7 @@ import {Login} from './components/Login'
 import { MyUncontrolledForm } from './components/MyUncontrolledForm'
 import { MyTodoList } from './components/MyTodoList'
 import { Welcome } from './components/Welcome'
+import { Container } from './components/Container'
 
 export class App extends React.Component {
     render() {
@@ -17,6 +18,7 @@ export class App extends React.Component {
             <MyUncontrolledForm />
             <MyTodoList />
             <Welcome />
+            <Container />
         </div>
 
     }
