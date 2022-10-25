@@ -4,6 +4,7 @@ import { Counter } from './components/Counter'
 import { InteractiveWelcome } from './components/InteractiveWelcome'
 import {Login} from './components/Login'
 import { MyUncontrolledForm } from './components/MyUncontrolledForm'
+import { MyTodoList } from './components/MyTodoList'
 
 export class App extends React.Component {
     render() {
@@ -13,6 +14,7 @@ export class App extends React.Component {
             <ClickTracker />
             <Login />
             <MyUncontrolledForm />
+            <MyTodoList />
         </div>
 
     }
