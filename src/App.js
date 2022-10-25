@@ -18,7 +18,7 @@ export class App extends React.Component {
             <MyUncontrolledForm />
             <MyTodoList />
             <Welcome />
-            <Container />
+            <Container title={'This is an awesome title passed as prop :D'} />
         </div>
 
     }

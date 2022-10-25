@@ -24,3 +24,18 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #FF0000;
 }
+.container_title { 
+    color: #e61eba;
+    border: 2px solid #79035f8f;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.container_title:hover {
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: grab; 
+}
