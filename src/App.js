@@ -5,6 +5,7 @@ import { InteractiveWelcome } from './components/InteractiveWelcome'
 import {Login} from './components/Login'
 import { MyUncontrolledForm } from './components/MyUncontrolledForm'
 import { MyTodoList } from './components/MyTodoList'
+import { Welcome } from './components/Welcome'
 
 export class App extends React.Component {
     render() {
@@ -15,6 +16,7 @@ export class App extends React.Component {
             <Login />
             <MyUncontrolledForm />
             <MyTodoList />
+            <Welcome />
         </div>
 
     }
