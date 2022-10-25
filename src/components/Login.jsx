@@ -6,7 +6,7 @@ export class Login extends React.Component {
         password: '',
         remember: false
     }
- 
+
     handleInputChange = (event) => {
         const value = event.target.value
         const name = event.target.name
@@ -18,7 +18,7 @@ export class Login extends React.Component {
         })
     }
 
-  
+
 
     handlePasswordChange = (event) => {
         const value = event.target.value
@@ -34,20 +34,23 @@ export class Login extends React.Component {
             remember: false
         })
     }
-
     handleCheckboxChange = (event) => {
         const name = event.target.name
         const checked = event.target.checked
-        
+
 
         this.setState({
             [name]: checked,
         })
     }
     render() {
+        const loginStyleButton = {
+            backgroundColor: this.state.password.length > 8 ? 'green' : 'red',
+            color: 'white'
+        }
         return <div>
             <h1>My Form</h1>
-        
+
             <div>
 
 
@@ -56,8 +59,8 @@ export class Login extends React.Component {
                     value={this.state.username}
                     onChange={this.handleInputChange}
                     placeholder="Username"
-                    />
-                    
+                />
+
                 <input
                     name="password"
                     type="password"
@@ -71,14 +74,16 @@ export class Login extends React.Component {
                     type="checkbox"
                     checked={this.state.remember}
                     onChange={this.handleCheckboxChange} />
-                     
-                     <button
-                     type="submit"
-                      onClick={this.onLogin}
-                      disabled={!(this.state.username && this.state.password)}>Login</button>
 
-                <button onClick={this.handleResetState}>Reset</button> 
-                     
+                <button
+                style={loginStyleButton}
+                    type="submit"
+                    onClick={this.onLogin}
+                    disabled={!(this.state.username && this.state.password)}>Login</button>
+               
+                <button onClick={this.handleResetState}>Reset</button>
+
+                
             </div>
 
         </div>
