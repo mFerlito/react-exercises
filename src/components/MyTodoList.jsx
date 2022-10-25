@@ -14,9 +14,7 @@ export class MyTodoList extends React.Component {
 
     handlerAddName = () => {
         this.setState({
-            names: [...this.state.names, this.state.valueInput] 
-            // attraverso lo spread operator evito che una volta aggiunto un elemento 
-            // alla lista, l'array venga compresso in un li
+            names: [this.state.valueInput]  
         })
     }
     render() {
@@ -28,7 +26,7 @@ export class MyTodoList extends React.Component {
 
                 <input type="text"
                        name="username"
-                       placeholder="Insert name to add..."
+                       placeholder="Submit name"
                        onChange={this.handlerInputChange}
                        value={this.state.valueInput}
                        />
