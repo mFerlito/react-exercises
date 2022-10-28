@@ -1,7 +1,7 @@
 import React from 'react'
-import { DisplayLanguage } from './components/DisplayLanguage'
 import { Welcome } from './components/Welcome'
 import { Sum } from './components/Sum'
+import {ClickCounter} from './components/ClickCounter'
 
 
 
@@ -14,6 +14,7 @@ export class App extends React.Component {
 
             <Welcome />  
             <Sum />
+            <ClickCounter />
 
         </div>
 
