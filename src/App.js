@@ -4,6 +4,7 @@ import { Sum } from './components/Sum'
 import {ClickCounter} from './components/ClickCounter'
 import {Login} from './components/Login'
 import {Counter} from './components/Counter'
+import {GithubUser} from './components/Githubuser'
 
 
 
@@ -15,10 +16,7 @@ export class App extends React.Component {
 
 
             <Welcome />  
-            <Sum />
-           
-            <Login />
-            <Counter />
+            <GithubUser username={'mFerlito'} />
 
         </div>
 
