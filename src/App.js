@@ -3,7 +3,7 @@ import { Welcome } from './components/Welcome'
 import { Sum } from './components/Sum'
 import {ClickCounter} from './components/ClickCounter'
 import {Login} from './components/Login'
-import {Counter} from './components/Counter'
+import {Counter} from './components/UseCounter'
 import {GithubUser} from './components/GithubUser'
 import {GithubUserList} from './components/GitHubUserList'
 
@@ -16,9 +16,9 @@ export class App extends React.Component {
         return <div>
 
 
-            <Welcome />  
-            <GithubUser username={'mFerlito'} />
-            <GithubUserList/>
+        <Welcome />  
+        <GithubUserList/> 
+        <Counter />  
 
         </div>
 
