@@ -1,12 +1,5 @@
 import React from 'react'
-
-import { GithubUserList } from './components/GitHubUserList'
-
-import { Welcome } from './components/Welcome'
-import { UseCounter } from './components/UseCounter' 
-import { LoginForm } from './components/LoginForm' 
-import { GithubUser } from "./components/GithubUser";
-
+import { CarSelector } from './components/CarSelector'
 
 
 
@@ -17,9 +10,7 @@ export class App extends React.Component {
         return <div>
 
 
-            <Welcome />
-            <GithubUser username="mFerlito" /> 
-            <GithubUserList/>
+        <CarSelector initialData={{defaultModel: "Ford Fiesta", defaultYear: 2002, defaultColor: "Grey"}}/>
             
 
          
