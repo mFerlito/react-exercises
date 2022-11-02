@@ -1,27 +1,34 @@
-import React from "react";
+import { useEffect, React, useState } from "react";
 import { ClickCounter } from "./ClickCounter";
 import { CounterDisplay } from "./CounterDisplay";
 
-export class Counter extends React.Component {
-    state = {
-        count: this.props.initialValue ?? 0,
-    }
-    
-    componentDidMount(){
+export function Counter({ initialValue = 0, intervalCounter = 1000, incrementAmount = 1 }) {
+    const [counter, setCounter] = useState(initialValue)
 
-        setInterval(() => {
-            this.setState(() => {
-                return {count: this.state.count + (this.props.incrementAmount ?? 1)};
+    useEffect(() => {
+        console.log(`mount component`);
+
+
+        const interval = setInterval(() => {
+            setCounter((counter) => {
+                return counter + incrementAmount
             })
-        }, this.props.incrementInterval ?? 1000)
-    }
+        }, intervalCounter)
 
-    
-    render(){
-        return <div>
-            <CounterDisplay count={this.state.count} />  
-            <ClickCounter count= {this.state.count}/> 
-            </div>
-        
-    }
+        return () => {
+            clearInterval(interval)
+            console.log(`unmount component`);
+        }
+    }, [counter])
+
+
+
+
+
+    return (
+        <div>
+            <h1>Counter:{counter}</h1>
+        </div>
+    )
+
 }
