@@ -2,6 +2,7 @@ import React, { useState }  from 'react'
 import { DisplayLanguage } from "./components/DisplayLanguage";
 import { LanguageContext } from "./components/LanguageContext";
 import {CarSelector} from "./components/CarSelector"
+import { UseCounter } from "./components/UseCounter";
 
 
 
@@ -26,6 +27,7 @@ export function App() {
                 <CarSelector initialData={{ defaultModel: "Ford Fiesta", defaultYear: 2002, defaultColor: "Grey" }} />
                 <DisplayLanguage />
             </LanguageContext.Provider>
+            <UseCounter/> 
         </div>
     )
 
