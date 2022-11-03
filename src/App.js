@@ -8,11 +8,11 @@ export function App() {
 
     return (
         <div>
-            <Link to="/">Home</Link> | <Link to="./components/Counter">Counter</Link> | <Link to="/user">Github User</Link>
+            <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> | <Link to="/user">Github User</Link>
             <Routes>
                 <Route path="/" element={<Welcome name='Marco' />} />
-                <Route path='/' element={<Counter />} />
-                <Route path="/user/:username" element={<ShowGithubUser />} />
+                <Route path='/counter' element={<Counter />} />
+                <Route path="/user/:username" element={<ShowGithubUser /> }/>
             </Routes>
         </div>
     )
