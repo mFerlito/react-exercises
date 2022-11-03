@@ -1,12 +1,16 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { Root } from "./Root";
-import './style/index.css'; 
+import ReactDOM from "react-dom/client";
+// import reportWebVitals from './reportWebVitals';
+import {App} from './App';
+import "./style/index.css"
+import { BrowserRouter } from 'react-router-dom'
 
-const container = document.querySelector('#root');
-const root = createRoot(container);
-
+const root = ReactDOM.createRoot(document.getElementById('root')
+);
 root.render(
- 
-        <Root />
- )
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+        
+
+);
