@@ -1,11 +1,7 @@
-import React from "react";
- 
-
-export function Welcome () {
-    
-        return <div className="welcome">  
-        <h2>Welcome, {Welcome.name && "Marco" }</h2> 
-        
-</div>
-    
+export function Welcome({name = "World"}){
+    return(
+        <div className="welcome">
+            <h2>Hello, {name}</h2>
+        </div>
+    )
 }
